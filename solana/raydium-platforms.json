@@ -1,0 +1,46 @@
+{
+  "program": "LanMV9sAd7wArD4vJFi2qDdfnVhFxYSUg6eADduJ3uj",
+  "raydiumFeeBps": 25,
+  "platforms": [
+    {
+      "tier": "t125",
+      "tradeFeeBps": 125,
+      "platformBps": 50,
+      "creatorBps": 50,
+      "platform": "HHq1qkhbC7G76nJtZmxcjnGZ6UTstbNcDQMa6NCmW1BE",
+      "cpmmConfig": "52MZUkNsRYzP4gn2mCaLTVtJQy2tpoF79hp5K1HhAxxX"
+    },
+    {
+      "tier": "t225",
+      "tradeFeeBps": 225,
+      "platformBps": 150,
+      "creatorBps": 50,
+      "platform": "7hw8EGKe28zZdNovJNWmBz8fPcZGitBLDrcDuGsZ9Efo",
+      "cpmmConfig": "EwJc3KbDCfJyvCtTpLd58PMPkNBUMHnPioRLKHL3sQh1"
+    },
+    {
+      "tier": "t325",
+      "tradeFeeBps": 325,
+      "platformBps": 250,
+      "creatorBps": 50,
+      "platform": "AHxKtoiVuCJgBrDzBDiakt5BeitFvuLA2hmSsdF1B9XX",
+      "cpmmConfig": "EwJc3KbDCfJyvCtTpLd58PMPkNBUMHnPioRLKHL3sQh1"
+    },
+    {
+      "tier": "t425",
+      "tradeFeeBps": 425,
+      "platformBps": 350,
+      "creatorBps": 50,
+      "platform": "2cUNMwy4hcQAFfEYafGwCbiTtCW44hNRhb7Gy1qj6h4j",
+      "cpmmConfig": "EwJc3KbDCfJyvCtTpLd58PMPkNBUMHnPioRLKHL3sQh1"
+    },
+    {
+      "tier": "t575",
+      "tradeFeeBps": 575,
+      "platformBps": 500,
+      "creatorBps": 50,
+      "platform": "AqUUNbiMdn4aLLnRPvYQG1KsbPZRHpwBjYRT1ZQ9mwt9",
+      "cpmmConfig": "EwJc3KbDCfJyvCtTpLd58PMPkNBUMHnPioRLKHL3sQh1"
+    }
+  ]
+}

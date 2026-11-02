@@ -1,0 +1,20 @@
+{
+  "buy_exactIn": "109767",
+  "buy_exactOut": "80926",
+  "buy_inSniperWindow": "98719",
+  "buy_thatGraduates": "153248",
+  "buyback": "147393",
+  "claimCreator": "51257",
+  "launch": "749694",
+  "launch_erc20_probeOnly": "832028",
+  "launch_erc20_quoteAt0xff00": "786710",
+  "launch_erc20_withFirstBuy": "1032289",
+  "launch_withFirstBuy": "959918",
+  "launch_worstCase": "2016294",
+  "router_buy_exactIn": "99513",
+  "router_sell_exactIn": "78607",
+  "sell_exactIn": "81062",
+  "sell_exactOut": "79423",
+  "sweep_fiveTokens": "166241",
+  "sweep_oneToken": "59073"
+}

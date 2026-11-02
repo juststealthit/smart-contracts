@@ -1,0 +1,18 @@
+{
+  "launch": {
+    "gasUsed": 798599,
+    "gasLimitFound": 848511
+  },
+  "launch_withFirstBuy": {
+    "gasUsed": 1021383,
+    "gasLimitFound": 1085219
+  },
+  "launch_withFirstBuy_buybackType": {
+    "gasUsed": 970095,
+    "gasLimitFound": 1030725
+  },
+  "launch_worstCase": {
+    "gasUsed": 2070646,
+    "gasLimitFound": 2200061
+  }
+}

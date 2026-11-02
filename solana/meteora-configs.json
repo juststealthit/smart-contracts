@@ -1,0 +1,133 @@
+{
+  "program": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+  "tier": "m100",
+  "tradeFeeBps": 125,
+  "meteoraShareBps": 2000,
+  "coinPct": 70,
+  "sniper": {
+    "startBps": 9000,
+    "seconds": 15
+  },
+  "configs": [
+    {
+      "symbol": "SOL",
+      "quoteMint": "So11111111111111111111111111111111111111112",
+      "targetUnits": 85,
+      "config": "D28DJbYAeZGQfdiTEa8L4Bso71RmYJ4STmE8o47P6XCE"
+    },
+    {
+      "symbol": "USDC",
+      "quoteMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "targetUnits": 8000,
+      "config": "57HfLa2MPz3YLV4UN7QFqMtgZ5aUQkTAVgP3BETXknGv"
+    },
+    {
+      "symbol": "USDT",
+      "quoteMint": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+      "targetUnits": 8000,
+      "config": "J9MjcaNQ2rUm9eLaG8MtWsgXJFFrupASN8fz5c9YjuhR"
+    },
+    {
+      "symbol": "USD1",
+      "quoteMint": "USD1ttGY1N17NEEHLmELoaybftRBUSErhqYiQzvEmuB",
+      "targetUnits": 8000,
+      "config": "321scyzh41gkLjz5JfAdLsBCxHq8FSZ2nyGiWWmDCbXG"
+    },
+    {
+      "symbol": "ANSEM",
+      "quoteMint": "9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump",
+      "targetUnits": 165300,
+      "config": "H1wDK29QH1g3nP64soScyYhutNRxJY1Fm4RGLHC8dGEF"
+    },
+    {
+      "symbol": "BOME",
+      "quoteMint": "ukHH6c7mMyiWCf1b9pnWe25TSpkDDt3H5pQZgZ74J82",
+      "targetUnits": 13190000,
+      "config": "EJ3Aq5xhHJbvwoPRB55QRH7ediniArsinXCg4xY1NP8"
+    },
+    {
+      "symbol": "TRX",
+      "quoteMint": "GbbesPbaYh5uiAZSYNXTc7w9jty1rpg3P9L4JeN4LkKc",
+      "targetUnits": 23790,
+      "config": "CpJFWM1psGp687MdV9fmLyB79owmVcTn52JrJ8pz6sDE"
+    },
+    {
+      "symbol": "cbBTC",
+      "quoteMint": "cbbtcf3aa214zXHbiAZQwf4122FBYbraNdFqgw4iMij",
+      "targetUnits": 0.1063,
+      "config": "5icjeHGxLJdpMMoneL2TD59YPiVgGfKHuhyUoaYrhFRh"
+    },
+    {
+      "symbol": "ZEC",
+      "quoteMint": "A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS",
+      "targetUnits": 6.613,
+      "config": "FBZXKhaGMWU5E4BkUVUtphRVAg9noVxzTMcEFPRM5b39"
+    },
+    {
+      "symbol": "Fartcoin",
+      "quoteMint": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+      "targetUnits": 69410,
+      "config": "2MGA8HooQtJJiJXgL7ijBrMjDGvvRgMrDtWJdBW3siG7"
+    },
+    {
+      "symbol": "ETH",
+      "quoteMint": "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs",
+      "targetUnits": 3.675,
+      "config": "BUy7gA9geY9fhzDo2N43PamvbYc7vPv8WjCLvoLfy7AS"
+    },
+    {
+      "symbol": "BP",
+      "quoteMint": "BPxxfRCXkUVhig4HS1Lh7kZqV6SPJhzfEk4x6fVBjPCy",
+      "targetUnits": 8788,
+      "config": "2MdixPMBNGPWAWXqpJj3G5pZcuQjerBahiPB2KH4CbeR"
+    },
+    {
+      "symbol": "$WIF",
+      "quoteMint": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+      "targetUnits": 47140,
+      "config": "6BLgHmjxZZp6cnWdhiMgnzAYVQD5RHfCoHKtbCeSEJY7"
+    },
+    {
+      "symbol": "TRUMP",
+      "quoteMint": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+      "targetUnits": 5275,
+      "config": "6qRWMt1Vr9XCgn7XCF9kBNKu7vfxTkZULprE4GmFuySa"
+    },
+    {
+      "symbol": "MET",
+      "quoteMint": "METvsvVRapdj9cFLzq4Tr43xK4tAjQfwX76z3n6mWQL",
+      "targetUnits": 29210,
+      "config": "9qRzjsurZACkCVQv6MVR53QDsRZRx8BTMH8TSc9FWZWF"
+    },
+    {
+      "symbol": "CARDS",
+      "quoteMint": "CARDSccUMFKoPRZxt5vt3ksUbxEFEcnZ3H2pd3dKxYjp",
+      "targetUnits": 30430,
+      "config": "HTQZ4ScSvQmHYdCYHZVFancysJLm3o3bLo5ENCgx25Xk"
+    },
+    {
+      "symbol": "PENGU",
+      "quoteMint": "2zMMhcVQEXDtdE6vsFS7S7D5oUodfJHE8vd1gnBouauv",
+      "targetUnits": 1130000,
+      "config": "2cKt1S8bH49V12mnCVWefJP9wtP31a7DiKBcAvuPsbUE"
+    },
+    {
+      "symbol": "STONK",
+      "quoteMint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
+      "targetUnits": 61320,
+      "config": "AVgGoZaazMtbddEae7KM2EiQdUjX1u1BvHLnjqUB391H"
+    },
+    {
+      "symbol": "USELESS",
+      "quoteMint": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk",
+      "targetUnits": 61500,
+      "config": "38Ff3PnZ69jWJXJABbLCTqvwapzM8mbtvrsVfVaZiL9t"
+    },
+    {
+      "symbol": "HYPE",
+      "quoteMint": "98sMhvDwXj1RQi5c5Mndm3vPe9cBqPrbLaufMXFNMh5g",
+      "targetUnits": 89.78,
+      "config": "FKpBSS8yieuY3hHH4LPFbcMXdRkErUxM4VYDuDsggsTH"
+    }
+  ]
+}

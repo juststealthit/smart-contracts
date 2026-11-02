@@ -1,0 +1,126 @@
+# Just Stealth It EVM contracts. One source tree, two builds:
+#   default  = Uniswap v4 (Robinhood Chain, HyperEVM, Base, Arc)
+#   infinity = PancakeSwap Infinity CL (BNB Chain)
+# The only thing that differs is the `@dex/` remapping, which picks variants/<name>/.
+[profile.default]
+src = "src"
+out = "out/v4"
+cache_path = "cache/v4"
+libs = ["lib"]
+test = "test"
+script = "script"
+solc_version = "0.8.26"
+evm_version = "cancun"
+optimizer = true
+optimizer_runs = 1000
+ffi = false
+auto_detect_remappings = false
+remappings = [
+  "forge-std/=lib/forge-std/src/",
+  "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+  "solmate/=lib/solmate/",
+  "v4-core/=lib/v4-core/",
+  "@uniswap/v4-core/=lib/v4-core/",
+  "v4-periphery/=lib/v4-periphery/",
+  "@dex/=variants/v4/",
+]
+fs_permissions = [
+  { access = "read", path = "./test/fixtures" },
+  { access = "read-write", path = "./deployments" },
+  { access = "read-write", path = "./snapshots" },
+]
+
+[profile.default.fuzz]
+runs = 1000
+
+[profile.default.invariant]
+runs = 64
+depth = 100
+fail_on_revert = true
+
+[profile.infinity]
+out = "out/infinity"
+cache_path = "cache/infinity"
+remappings = [
+  "forge-std/=lib/forge-std/src/",
+  "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+  "solmate/=lib/solmate/",
+  "infinity-core/=lib/infinity-core/",
+  "infinity-periphery/=lib/infinity-periphery/",
+  "@dex/=variants/infinity/",
+]
+
+[profile.infinity.fuzz]
+runs = 1000
+
+[profile.infinity.invariant]
+runs = 64
+depth = 100
+fail_on_revert = true
+
+# Before calling a phase done: FOUNDRY_PROFILE=deep (v4) or deep-infinity.
+[profile.deep.fuzz]
+runs = 100000
+
+[profile.deep.invariant]
+runs = 1000
+depth = 500
+fail_on_revert = true
+
+[profile.deep-infinity]
+out = "out/infinity"
+cache_path = "cache/infinity"
+remappings = [
+  "forge-std/=lib/forge-std/src/",
+  "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+  "solmate/=lib/solmate/",
+  "infinity-core/=lib/infinity-core/",
+  "infinity-periphery/=lib/infinity-periphery/",
+  "@dex/=variants/infinity/",
+]
+
+[profile.deep-infinity.fuzz]
+runs = 100000
+
+[profile.deep-infinity.invariant]
+runs = 1000
+depth = 500
+fail_on_revert = true
+
+# Cross-check against the Python reference model (needs ffi): STEALTH_DIFF=true FOUNDRY_PROFILE=diff (v4) or
+# diff-infinity, --match-contract Differential.
+[profile.diff]
+ffi = true
+
+[profile.diff.fuzz]
+runs = 2000
+
+[profile.diff-infinity]
+ffi = true
+out = "out/infinity"
+cache_path = "cache/infinity"
+remappings = [
+  "forge-std/=lib/forge-std/src/",
+  "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+  "solmate/=lib/solmate/",
+  "infinity-core/=lib/infinity-core/",
+  "infinity-periphery/=lib/infinity-periphery/",
+  "@dex/=variants/infinity/",
+]
+
+[profile.diff-infinity.fuzz]
+runs = 2000
+
+[lint]
+lint_on_build = false
+
+[rpc_endpoints]
+robinhood = "https://rpc.mainnet.chain.robinhood.com"
+hyperevm = "https://rpc.hyperliquid.xyz/evm"
+bsc = "https://bsc-dataseed.bnbchain.org"
+base = "https://mainnet.base.org"
+arc = "https://rpc.mainnet.arc.io"
+local = "http://127.0.0.1:8545"
+
+[fmt]
+line_length = 120
