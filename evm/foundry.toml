@@ -120,6 +120,9 @@ hyperevm = "https://rpc.hyperliquid.xyz/evm"
 bsc = "https://bsc-dataseed.bnbchain.org"
 base = "https://mainnet.base.org"
 arc = "https://rpc.mainnet.arc.io"
+ethereum = "https://ethereum-rpc.publicnode.com"
+arbitrum = "https://arb1.arbitrum.io/rpc"
+avalanche = "https://api.avax.network/ext/bc/C/rpc"
 local = "http://127.0.0.1:8545"
 
 [fmt]

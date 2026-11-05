@@ -23,7 +23,7 @@ The front door. Anyone can call `launch`. It checks the parameters, deploys the 
 
 Events: `Launched`, `ConfigChanged`, `QuoteListed`, `QuoteDelisted`, `AdminProposed`, `AdminChanged`.
 
-**Hard caps:** launch fee at most 0.1 of the native coin. It's 0 on all five chains.
+**Hard caps:** launch fee at most 0.1 of the native coin. It's 0 on every chain.
 
 ## StealthTokenDeployer
 

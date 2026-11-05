@@ -2,7 +2,7 @@
 
 The EVM contracts behind Just Stealth It, and the Solana configs its launches use.
 
-**Live on five chains. Not audited.** The source here matches the deployed code byte for byte, and [you can check that yourself](#check-it-yourself).
+**Live on five chains, with Ethereum, Arbitrum and Avalanche deploying now. Not audited.** The source here matches the deployed code byte for byte, and [you can check that yourself](#check-it-yourself).
 
 | | |
 | --- | --- |
@@ -25,6 +25,16 @@ Seven contracts on each chain, from one source tree.
 | HyperEVM | 999 | HYPE | Uniswap v4 | default |
 | Base | 8453 | ETH | Uniswap v4 | default |
 | Arc | 5042 | USDC | Uniswap v4 | default |
+
+### Deploying now
+
+The same source and the same Uniswap v4 build. Their addresses go in [`docs/chains.md`](docs/chains.md) once each deploy is checked on chain.
+
+| Chain | Id | Gas | DEX | Build |
+| --- | --- | --- | --- | --- |
+| Ethereum | 1 | ETH | Uniswap v4 | default |
+| Arbitrum One | 42161 | ETH | Uniswap v4 | default |
+| Avalanche C-Chain | 43114 | AVAX | Uniswap v4 | default |
 
 Full addresses: [`docs/chains.md`](docs/chains.md).
 
@@ -137,4 +147,4 @@ MIT for this repository's own code. Vendored libraries keep their own licenses, 
 
 These contracts have not had an outside audit. Tests aren't an audit, and new code carries risk. Report a problem through [juststealthit.xyz/status](https://juststealthit.xyz/status).
 
-Just Stealth It is not affiliated with Robinhood, BNB Chain, Hyperliquid, Base, Circle, Uniswap or PancakeSwap.
+Just Stealth It is not affiliated with Robinhood, BNB Chain, Hyperliquid, Base, Circle, the Ethereum Foundation, Arbitrum, Avalanche, Uniswap or PancakeSwap.

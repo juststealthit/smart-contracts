@@ -55,12 +55,21 @@ contract DeployDryRunTest is BaseTest {
         script.run();
         vm.chainId(chain);
 
-        // Base and Arc are v4 chains: the Infinity build is refused there.
+        // Base, Arc, Ethereum, Arbitrum and Avalanche are v4 chains: the Infinity build is refused there.
         if (keccak256(bytes(DEX_NAME)) == keccak256("infinity")) {
             vm.chainId(8453);
             vm.expectPartialRevert(Deploy.WrongBuildForChain.selector);
             script.run();
             vm.chainId(5042);
+            vm.expectPartialRevert(Deploy.WrongBuildForChain.selector);
+            script.run();
+            vm.chainId(1);
+            vm.expectPartialRevert(Deploy.WrongBuildForChain.selector);
+            script.run();
+            vm.chainId(42161);
+            vm.expectPartialRevert(Deploy.WrongBuildForChain.selector);
+            script.run();
+            vm.chainId(43114);
             vm.expectPartialRevert(Deploy.WrongBuildForChain.selector);
             script.run();
             vm.chainId(chain);

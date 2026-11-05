@@ -11,10 +11,10 @@ import {LaunchType} from "../../src/interfaces/IStealth.sol";
 import {StealthFactory} from "../../src/StealthFactory.sol";
 import {StealthDeploy} from "../../script/lib/StealthDeploy.sol";
 
-/// @notice Base (8453) and Arc (5042) on the v4 build: the whole system deployed into a local fork with the mainnet deploy's
+/// @notice Base (8453), Arc (5042), Ethereum (1), Arbitrum One (42161) and Avalanche C-Chain (43114) on the v4 build: the whole system deployed into a local fork with the mainnet deploy's
 ///         settings, then a launch, trades, the fee split, a sweep, a creator claim, a Pot payout and graduation against the
 ///         chain's own PoolManager and Quoter. Nothing is broadcast. Needs STEALTH_FORK=true; skips cleanly if the RPC can't be
-///         reached. STEALTH_BASE_RPC or STEALTH_ARC_RPC picks a private RPC, otherwise foundry.toml's public one. Only the v4 build
+///         reached. STEALTH_<CHAIN>_RPC (BASE, ARC, ETH, ARB, AVAX) picks a private RPC, otherwise foundry.toml's public one. Only the v4 build
 ///         has these chains.
 abstract contract NewChainFork is BaseTest {
     DexFork.Chain internal live;
@@ -39,7 +39,8 @@ abstract contract NewChainFork is BaseTest {
             vm.skip(true);
             return;
         }
-        vm.rollFork(block.number - 20);
+        // Arbitrum's block.number is Ethereum's block number, so rolling back by it lands years in the past: stay at the tip there.
+        if (block.chainid != 42161) vm.rollFork(block.number - 20);
         assertEq(block.chainid, _expectedChainId(), "wrong chain");
         super.setUp();
     }
@@ -236,5 +237,74 @@ contract ArcChainFork is NewChainFork {
 
     function _trade() internal pure override returns (uint256) {
         return 1_000 ether;
+    }
+}
+
+/// @notice Ethereum: ETH, so Base's targets.
+contract EthereumChainFork is NewChainFork {
+    function _index() internal pure override returns (uint256) {
+        return 4;
+    }
+
+    function _rpcEnv() internal pure override returns (string memory) {
+        return "STEALTH_ETH_RPC";
+    }
+
+    function _expectedChainId() internal pure override returns (uint256) {
+        return 1;
+    }
+
+    function _targets() internal pure override returns (uint256[5] memory) {
+        return [uint256(1.5 ether), 2.5 ether, 3.5 ether, 8 ether, 15 ether];
+    }
+
+    function _trade() internal pure override returns (uint256) {
+        return 0.5 ether;
+    }
+}
+
+/// @notice Arbitrum One: ETH, so Base's targets.
+contract ArbitrumChainFork is NewChainFork {
+    function _index() internal pure override returns (uint256) {
+        return 5;
+    }
+
+    function _rpcEnv() internal pure override returns (string memory) {
+        return "STEALTH_ARB_RPC";
+    }
+
+    function _expectedChainId() internal pure override returns (uint256) {
+        return 42161;
+    }
+
+    function _targets() internal pure override returns (uint256[5] memory) {
+        return [uint256(1.5 ether), 2.5 ether, 3.5 ether, 8 ether, 15 ether];
+    }
+
+    function _trade() internal pure override returns (uint256) {
+        return 0.5 ether;
+    }
+}
+
+/// @notice Avalanche C-Chain: AVAX, the same raise in dollars as the ETH chains (AVAX $8.78, ETH $2,424 on 2026-11-05).
+contract AvalancheChainFork is NewChainFork {
+    function _index() internal pure override returns (uint256) {
+        return 6;
+    }
+
+    function _rpcEnv() internal pure override returns (string memory) {
+        return "STEALTH_AVAX_RPC";
+    }
+
+    function _expectedChainId() internal pure override returns (uint256) {
+        return 43114;
+    }
+
+    function _targets() internal pure override returns (uint256[5] memory) {
+        return [uint256(400 ether), 700 ether, 1_000 ether, 2_300 ether, 4_300 ether];
+    }
+
+    function _trade() internal pure override returns (uint256) {
+        return 100 ether;
     }
 }

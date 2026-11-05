@@ -70,6 +70,18 @@ library UniversalRouterLib {
     address internal constant ARC_UNIVERSAL_ROUTER = 0x8876789976dEcBfCbBbe364623C63652db8C0904;
     address internal constant ARC_V4_QUOTER = 0x8Dc178eFB8111BB0973Dd9d722ebeFF267c98F94;
     address internal constant ARC_POOL_MANAGER = 0x8366a39CC670B4001A1121B8F6A443A643e40951;
+    // Ethereum, Arbitrum One and Avalanche C-Chain, from Uniswap's v4 deployments page (2026-11-05)
+    address internal constant ETH_UNIVERSAL_ROUTER = 0x66a9893cC07D91D95644AEDD05D03f95e1dBA8Af;
+    address internal constant ETH_V4_QUOTER = 0x99bd42B2B22e531f283b7F8a86dFf631EB16A9D1;
+    address internal constant ETH_POOL_MANAGER = 0x000000000004444c5dc75cB358380D2e3dE08A90;
+
+    address internal constant ARB_UNIVERSAL_ROUTER = 0xA51afAFe0263b40EdaEf0Df8781eA9aa03E381a3;
+    address internal constant ARB_V4_QUOTER = 0x8928074CA1b241D8Ec02815881c1Af11E8bC5219;
+    address internal constant ARB_POOL_MANAGER = 0x360E68faCcca8cA495c1B759Fd9EEe466db9FB32;
+
+    address internal constant AVAX_UNIVERSAL_ROUTER = 0x94b75331AE8d42C1b61065089B7d48FE14aA73b7;
+    address internal constant AVAX_V4_QUOTER = 0xf27e532878B622d6b916F524E8711880107D4eF0;
+    address internal constant AVAX_POOL_MANAGER = 0x06380C0e0912312B5150364B9DC4542BA0DbBc85;
     /// @dev Uniswap's canonical Permit2, the same on every chain.
     address internal constant PERMIT2 = 0x000000000022D473030F116dDEE9F6B43aC78BA3;
 

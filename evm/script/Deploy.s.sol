@@ -15,7 +15,7 @@ import {StealthFactory} from "../src/StealthFactory.sol";
 ///         `STEALTH_CONFIRM_CHAIN` must repeat the chain id.
 ///
 ///         Build and chain must match: `forge script` (Uniswap v4) for Robinhood Chain 4663, HyperEVM 999, Base 8453, Arc
-///         5042 and the testnets 46630, 998; `FOUNDRY_PROFILE=infinity forge script` (PancakeSwap Infinity) for BNB Chain 56 and
+///         5042, Ethereum 1, Arbitrum One 42161, Avalanche C-Chain 43114 and the testnets 46630, 998; `FOUNDRY_PROFILE=infinity forge script` (PancakeSwap Infinity) for BNB Chain 56 and
 ///         its testnet 97. HyperEVM deploys need big blocks, which need a HyperCore account for the deployer.
 ///
 ///         A live run on a mainnet refuses `DEPLOYER_PK`: sign with `--ledger` or `--account`, with `--sender` equal to
@@ -94,7 +94,7 @@ contract Deploy is Script {
 
     function _isMainnet() internal view returns (bool) {
         return block.chainid == 4663 || block.chainid == 999 || block.chainid == 56 || block.chainid == 8453
-            || block.chainid == 5042;
+            || block.chainid == 5042 || block.chainid == 1 || block.chainid == 42161 || block.chainid == 43114;
     }
 
     /// @dev A v4 build on BNB Chain, or an Infinity build on the other chains, would deploy against the wrong manager.
@@ -102,7 +102,8 @@ contract Deploy is Script {
         bool infinityChain = block.chainid == 56 || block.chainid == 97;
         bool v4Chain =
             block.chainid == 4663 || block.chainid == 46630 || block.chainid == 999 || block.chainid == 998
-                || block.chainid == 8453 || block.chainid == 5042;
+                || block.chainid == 8453 || block.chainid == 5042 || block.chainid == 1 || block.chainid == 42161
+                || block.chainid == 43114;
         bool infinityBuild = keccak256(bytes(Dex.NAME)) == keccak256("pancakeswap-infinity");
         if ((infinityChain && !infinityBuild) || (v4Chain && infinityBuild)) {
             revert WrongBuildForChain(block.chainid, Dex.NAME);

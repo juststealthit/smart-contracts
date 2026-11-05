@@ -1,6 +1,6 @@
 # Contracts on each chain
 
-Every launch on a chain uses the addresses below. Each one has been checked: its code on chain equals the source in [`evm/src`](../evm/src), apart from the constructor values a compiler leaves blank. [How to check it yourself](../README.md#check-it-yourself).
+Every launch on a chain uses the addresses below. Ethereum, Arbitrum One and Avalanche C-Chain are being deployed; their rows say so until each deploy is checked. Each live address has been checked: its code on chain equals the source in [`evm/src`](../evm/src), apart from the constructor values a compiler leaves blank. [How to check it yourself](../README.md#check-it-yourself).
 
 ![All contracts on every chain](../assets/deployed.svg)
 
@@ -115,3 +115,68 @@ Chain id 5042. Gas in USDC. DEX: Uniswap v4.
 Graduation target for native pairs: 5,500 to 18,000 USDC, default 8,000. Launch fee: 0.
 
 Arc's gas coin is USDC. Native USDC has 18 decimals and its ERC-20 face has 6, on one balance. Pools pair with the native side.
+
+## Ethereum
+
+Chain id 1. Gas in ETH. DEX: Uniswap v4. **Deploying.** These rows fill in once the deploy is checked on chain.
+
+| Contract | Address |
+| --- | --- |
+| StealthFactory | Deploying |
+| StealthTokenDeployer | Deploying |
+| StealthToken (implementation) | Deploying |
+| StealthLocker | Deploying |
+| StealthHook | Deploying |
+| StealthFeeVault | Deploying |
+| StealthRouter | Deploying |
+
+| DEX contract | Address |
+| --- | --- |
+| PoolManager | [`0x000000000004444c5dc75cB358380D2e3dE08A90`](https://etherscan.io/address/0x000000000004444c5dc75cB358380D2e3dE08A90) |
+| V4Quoter | [`0x99bd42B2B22e531f283b7F8a86dFf631EB16A9D1`](https://etherscan.io/address/0x99bd42B2B22e531f283b7F8a86dFf631EB16A9D1) |
+
+Graduation target for native pairs: 2.5 to 8 ETH, default 3.5. Launch fee: 0.
+
+Ethereum blocks come every 12 seconds and the sniper fee steps by block time, so its 15-second window covers one or two blocks: the first pays 90%, the next about 19%. Gas costs more here than on the other chains.
+
+## Arbitrum One
+
+Chain id 42161. Gas in ETH. DEX: Uniswap v4. **Deploying.** These rows fill in once the deploy is checked on chain.
+
+| Contract | Address |
+| --- | --- |
+| StealthFactory | Deploying |
+| StealthTokenDeployer | Deploying |
+| StealthToken (implementation) | Deploying |
+| StealthLocker | Deploying |
+| StealthHook | Deploying |
+| StealthFeeVault | Deploying |
+| StealthRouter | Deploying |
+
+| DEX contract | Address |
+| --- | --- |
+| PoolManager | [`0x360E68faCcca8cA495c1B759Fd9EEe466db9FB32`](https://arbiscan.io/address/0x360E68faCcca8cA495c1B759Fd9EEe466db9FB32) |
+| V4Quoter | [`0x8928074CA1b241D8Ec02815881c1Af11E8bC5219`](https://arbiscan.io/address/0x8928074CA1b241D8Ec02815881c1Af11E8bC5219) |
+
+Graduation target for native pairs: 2.5 to 8 ETH, default 3.5. Launch fee: 0.
+
+## Avalanche C-Chain
+
+Chain id 43114. Gas in AVAX. DEX: Uniswap v4. **Deploying.** These rows fill in once the deploy is checked on chain.
+
+| Contract | Address |
+| --- | --- |
+| StealthFactory | Deploying |
+| StealthTokenDeployer | Deploying |
+| StealthToken (implementation) | Deploying |
+| StealthLocker | Deploying |
+| StealthHook | Deploying |
+| StealthFeeVault | Deploying |
+| StealthRouter | Deploying |
+
+| DEX contract | Address |
+| --- | --- |
+| PoolManager | [`0x06380C0e0912312B5150364B9DC4542BA0DbBc85`](https://snowtrace.io/address/0x06380C0e0912312B5150364B9DC4542BA0DbBc85) |
+| V4Quoter | [`0xf27e532878B622d6b916F524E8711880107D4eF0`](https://snowtrace.io/address/0xf27e532878B622d6b916F524E8711880107D4eF0) |
+
+Graduation target for native pairs: 700 to 2,300 AVAX, default 1,000. Launch fee: 0.

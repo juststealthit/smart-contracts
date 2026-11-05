@@ -1,18 +1,21 @@
 # Stealth EVM contracts: specification
 
-Status: **deployed on five chains, not audited.** Addresses are in [`../deployments`](../deployments), and [`docs/chains.md`](../../docs/chains.md) lists them per chain. This describes the source in this repository, which matches the deployed bytecode on every chain.
+Status: **deployed on five chains, deploying on three more, not audited.** Addresses are in [`../deployments`](../deployments), and [`docs/chains.md`](../../docs/chains.md) lists them per chain. This describes the source in this repository, which matches the deployed bytecode on every chain.
 
 ## 1. What it is
 
-A token launchpad on five chains.
+A token launchpad on five chains, with three more being deployed from the same source.
 
-| Chain | Id | Gas | DEX | Build |
-| --- | --- | --- | --- | --- |
-| Robinhood Chain | 4663 | ETH | Uniswap v4 | default |
-| HyperEVM | 999 | HYPE | Uniswap v4 | default |
-| Base | 8453 | ETH | Uniswap v4 | default |
-| Arc | 5042 | USDC (native, 18 decimals) | Uniswap v4 | default |
-| BNB Chain | 56 | BNB | PancakeSwap Infinity CL | `FOUNDRY_PROFILE=infinity` |
+| Chain | Id | Gas | DEX | Build | Status |
+| --- | --- | --- | --- | --- | --- |
+| Robinhood Chain | 4663 | ETH | Uniswap v4 | default | Live |
+| HyperEVM | 999 | HYPE | Uniswap v4 | default | Live |
+| Base | 8453 | ETH | Uniswap v4 | default | Live |
+| Arc | 5042 | USDC (native, 18 decimals) | Uniswap v4 | default | Live |
+| BNB Chain | 56 | BNB | PancakeSwap Infinity CL | `FOUNDRY_PROFILE=infinity` | Live |
+| Ethereum | 1 | ETH | Uniswap v4 | default | Deploying |
+| Arbitrum One | 42161 | ETH | Uniswap v4 | default | Deploying |
+| Avalanche C-Chain | 43114 | AVAX | Uniswap v4 | default | Deploying |
 
 Every launch deploys a token and opens its pool in one transaction, with the whole supply locked in two positions
 shaped like a bonding curve: 800M tokens from the launch price to the graduation price, 200M from there to the bottom
