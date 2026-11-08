@@ -2,7 +2,7 @@
 
 The EVM contracts behind Just Stealth It, and the Solana configs its launches use.
 
-**Live on five chains, with Ethereum, Arbitrum and Avalanche deploying now. Not audited.** The source here matches the deployed code byte for byte, and [you can check that yourself](#check-it-yourself).
+**Live on eight chains. Not audited.** The source here matches the deployed code byte for byte, and [you can check that yourself](#check-it-yourself).
 
 | | |
 | --- | --- |
@@ -25,13 +25,6 @@ Seven contracts on each chain, from one source tree.
 | HyperEVM | 999 | HYPE | Uniswap v4 | default |
 | Base | 8453 | ETH | Uniswap v4 | default |
 | Arc | 5042 | USDC | Uniswap v4 | default |
-
-### Deploying now
-
-The same source and the same Uniswap v4 build. Their addresses go in [`docs/chains.md`](docs/chains.md) once each deploy is checked on chain.
-
-| Chain | Id | Gas | DEX | Build |
-| --- | --- | --- | --- | --- |
 | Ethereum | 1 | ETH | Uniswap v4 | default |
 | Arbitrum One | 42161 | ETH | Uniswap v4 | default |
 | Avalanche C-Chain | 43114 | AVAX | Uniswap v4 | default |
@@ -119,10 +112,10 @@ Each launch type has its own way out of the vault.
 cd evm
 forge build
 FOUNDRY_PROFILE=infinity forge build
-python3 script/verify-deployed.py      # compares the code on all five chains with this source
+python3 script/verify-deployed.py      # compares the code on all eight chains with this source
 ```
 
-It compares 35 contracts. Constructor values are the only bytes it ignores.
+It compares 56 contracts. Constructor values are the only bytes it ignores.
 
 ## Build and test
 

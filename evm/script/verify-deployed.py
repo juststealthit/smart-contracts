@@ -16,6 +16,9 @@ RPCS = {
     999: "https://rpc.hyperliquid.xyz/evm",
     8453: "https://mainnet.base.org",
     5042: "https://rpc.mainnet.arc.io",
+    1: "https://ethereum-rpc.publicnode.com",
+    42161: "https://arb1.arbitrum.io/rpc",
+    43114: "https://api.avax.network/ext/bc/C/rpc",
 }
 NAMES = {
     "factory": "StealthFactory",

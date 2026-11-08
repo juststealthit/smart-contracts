@@ -1,6 +1,6 @@
 # Contracts on each chain
 
-Every launch on a chain uses the addresses below. Ethereum, Arbitrum One and Avalanche C-Chain are being deployed; their rows say so until each deploy is checked. Each live address has been checked: its code on chain equals the source in [`evm/src`](../evm/src), apart from the constructor values a compiler leaves blank. [How to check it yourself](../README.md#check-it-yourself).
+Every launch on a chain uses the addresses below. Each address has been checked: its code on chain equals the source in [`evm/src`](../evm/src), apart from the constructor values a compiler leaves blank. [How to check it yourself](../README.md#check-it-yourself).
 
 ![All contracts on every chain](../assets/deployed.svg)
 
@@ -118,17 +118,17 @@ Arc's gas coin is USDC. Native USDC has 18 decimals and its ERC-20 face has 6, o
 
 ## Ethereum
 
-Chain id 1. Gas in ETH. DEX: Uniswap v4. **Deploying.** These rows fill in once the deploy is checked on chain.
+Chain id 1. Gas in ETH. DEX: Uniswap v4.
 
 | Contract | Address |
 | --- | --- |
-| StealthFactory | Deploying |
-| StealthTokenDeployer | Deploying |
-| StealthToken (implementation) | Deploying |
-| StealthLocker | Deploying |
-| StealthHook | Deploying |
-| StealthFeeVault | Deploying |
-| StealthRouter | Deploying |
+| StealthFactory | [`0xF828FD2DB63E3aF84f950eFcF601dE1B679B567d`](https://etherscan.io/address/0xF828FD2DB63E3aF84f950eFcF601dE1B679B567d) |
+| StealthTokenDeployer | [`0x5d30FE70B12ABB4728741A7fF38295e5Dab0ed27`](https://etherscan.io/address/0x5d30FE70B12ABB4728741A7fF38295e5Dab0ed27) |
+| StealthToken (implementation) | [`0x005BDc162F7bCF6D5fEbB30a845698061F8AE3af`](https://etherscan.io/address/0x005BDc162F7bCF6D5fEbB30a845698061F8AE3af) |
+| StealthLocker | [`0x6e0C6a185ACd0b5CB8050823aB570A5565Bebf34`](https://etherscan.io/address/0x6e0C6a185ACd0b5CB8050823aB570A5565Bebf34) |
+| StealthHook | [`0x96CF2B85100Db273757851738530e24FD9b178EC`](https://etherscan.io/address/0x96CF2B85100Db273757851738530e24FD9b178EC) |
+| StealthFeeVault | [`0x5F15d599BA849554A40975333a7e39F537c37e61`](https://etherscan.io/address/0x5F15d599BA849554A40975333a7e39F537c37e61) |
+| StealthRouter | [`0x887724eBE323e7C4aBF4a240DDBa6828Bc89F6a6`](https://etherscan.io/address/0x887724eBE323e7C4aBF4a240DDBa6828Bc89F6a6) |
 
 | DEX contract | Address |
 | --- | --- |
@@ -141,17 +141,17 @@ Ethereum blocks come every 12 seconds and the sniper fee steps by block time, so
 
 ## Arbitrum One
 
-Chain id 42161. Gas in ETH. DEX: Uniswap v4. **Deploying.** These rows fill in once the deploy is checked on chain.
+Chain id 42161. Gas in ETH. DEX: Uniswap v4.
 
 | Contract | Address |
 | --- | --- |
-| StealthFactory | Deploying |
-| StealthTokenDeployer | Deploying |
-| StealthToken (implementation) | Deploying |
-| StealthLocker | Deploying |
-| StealthHook | Deploying |
-| StealthFeeVault | Deploying |
-| StealthRouter | Deploying |
+| StealthFactory | [`0xF828FD2DB63E3aF84f950eFcF601dE1B679B567d`](https://arbiscan.io/address/0xF828FD2DB63E3aF84f950eFcF601dE1B679B567d) |
+| StealthTokenDeployer | [`0x5d30FE70B12ABB4728741A7fF38295e5Dab0ed27`](https://arbiscan.io/address/0x5d30FE70B12ABB4728741A7fF38295e5Dab0ed27) |
+| StealthToken (implementation) | [`0x005BDc162F7bCF6D5fEbB30a845698061F8AE3af`](https://arbiscan.io/address/0x005BDc162F7bCF6D5fEbB30a845698061F8AE3af) |
+| StealthLocker | [`0x6e0C6a185ACd0b5CB8050823aB570A5565Bebf34`](https://arbiscan.io/address/0x6e0C6a185ACd0b5CB8050823aB570A5565Bebf34) |
+| StealthHook | [`0xf128fc93f952Ad8beDBb1F2A3eE437DD349738ec`](https://arbiscan.io/address/0xf128fc93f952Ad8beDBb1F2A3eE437DD349738ec) |
+| StealthFeeVault | [`0x5F15d599BA849554A40975333a7e39F537c37e61`](https://arbiscan.io/address/0x5F15d599BA849554A40975333a7e39F537c37e61) |
+| StealthRouter | [`0x887724eBE323e7C4aBF4a240DDBa6828Bc89F6a6`](https://arbiscan.io/address/0x887724eBE323e7C4aBF4a240DDBa6828Bc89F6a6) |
 
 | DEX contract | Address |
 | --- | --- |
@@ -162,17 +162,17 @@ Graduation target for native pairs: 2.5 to 8 ETH, default 3.5. Launch fee: 0.
 
 ## Avalanche C-Chain
 
-Chain id 43114. Gas in AVAX. DEX: Uniswap v4. **Deploying.** These rows fill in once the deploy is checked on chain.
+Chain id 43114. Gas in AVAX. DEX: Uniswap v4.
 
 | Contract | Address |
 | --- | --- |
-| StealthFactory | Deploying |
-| StealthTokenDeployer | Deploying |
-| StealthToken (implementation) | Deploying |
-| StealthLocker | Deploying |
-| StealthHook | Deploying |
-| StealthFeeVault | Deploying |
-| StealthRouter | Deploying |
+| StealthFactory | [`0xF828FD2DB63E3aF84f950eFcF601dE1B679B567d`](https://snowtrace.io/address/0xF828FD2DB63E3aF84f950eFcF601dE1B679B567d) |
+| StealthTokenDeployer | [`0x5d30FE70B12ABB4728741A7fF38295e5Dab0ed27`](https://snowtrace.io/address/0x5d30FE70B12ABB4728741A7fF38295e5Dab0ed27) |
+| StealthToken (implementation) | [`0x005BDc162F7bCF6D5fEbB30a845698061F8AE3af`](https://snowtrace.io/address/0x005BDc162F7bCF6D5fEbB30a845698061F8AE3af) |
+| StealthLocker | [`0x6e0C6a185ACd0b5CB8050823aB570A5565Bebf34`](https://snowtrace.io/address/0x6e0C6a185ACd0b5CB8050823aB570A5565Bebf34) |
+| StealthHook | [`0xEEDd5bc4EA5bC4d585Ef66515C3b990eBdE078Ec`](https://snowtrace.io/address/0xEEDd5bc4EA5bC4d585Ef66515C3b990eBdE078Ec) |
+| StealthFeeVault | [`0x5F15d599BA849554A40975333a7e39F537c37e61`](https://snowtrace.io/address/0x5F15d599BA849554A40975333a7e39F537c37e61) |
+| StealthRouter | [`0x887724eBE323e7C4aBF4a240DDBa6828Bc89F6a6`](https://snowtrace.io/address/0x887724eBE323e7C4aBF4a240DDBa6828Bc89F6a6) |
 
 | DEX contract | Address |
 | --- | --- |

@@ -1,10 +1,10 @@
 # Stealth EVM contracts: specification
 
-Status: **deployed on five chains, deploying on three more, not audited.** Addresses are in [`../deployments`](../deployments), and [`docs/chains.md`](../../docs/chains.md) lists them per chain. This describes the source in this repository, which matches the deployed bytecode on every chain.
+Status: **deployed on eight chains, not audited.** Addresses are in [`../deployments`](../deployments), and [`docs/chains.md`](../../docs/chains.md) lists them per chain. This describes the source in this repository, which matches the deployed bytecode on every chain.
 
 ## 1. What it is
 
-A token launchpad on five chains, with three more being deployed from the same source.
+A token launchpad on eight chains, from one source.
 
 | Chain | Id | Gas | DEX | Build | Status |
 | --- | --- | --- | --- | --- | --- |
@@ -13,9 +13,9 @@ A token launchpad on five chains, with three more being deployed from the same s
 | Base | 8453 | ETH | Uniswap v4 | default | Live |
 | Arc | 5042 | USDC (native, 18 decimals) | Uniswap v4 | default | Live |
 | BNB Chain | 56 | BNB | PancakeSwap Infinity CL | `FOUNDRY_PROFILE=infinity` | Live |
-| Ethereum | 1 | ETH | Uniswap v4 | default | Deploying |
-| Arbitrum One | 42161 | ETH | Uniswap v4 | default | Deploying |
-| Avalanche C-Chain | 43114 | AVAX | Uniswap v4 | default | Deploying |
+| Ethereum | 1 | ETH | Uniswap v4 | default | Live |
+| Arbitrum One | 42161 | ETH | Uniswap v4 | default | Live |
+| Avalanche C-Chain | 43114 | AVAX | Uniswap v4 | default | Live |
 
 Every launch deploys a token and opens its pool in one transaction, with the whole supply locked in two positions
 shaped like a bonding curve: 800M tokens from the launch price to the graduation price, 200M from there to the bottom
